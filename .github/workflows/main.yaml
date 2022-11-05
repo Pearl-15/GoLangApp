@@ -11,7 +11,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '#NORUN')"
     steps:
 
-    - name: ck version
+    - name: check version
       uses: actions/checkout@v3
       with:
         ref:  ${{ github.ref_name }}
