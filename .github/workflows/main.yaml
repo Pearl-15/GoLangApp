@@ -19,7 +19,7 @@ jobs:
     - name: install global railway
       run: npm i -g @railway/cli
 
-    - name: deployment of railway 
+    - name: railway deploy 
       run: railway up
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
