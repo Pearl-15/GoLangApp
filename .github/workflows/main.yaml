@@ -1,4 +1,4 @@
-name: Release_deploy_GolangApp_Go_Fortune
+name: Release_deploy_GolangApp
 
 on:
   push:
@@ -32,9 +32,6 @@ jobs:
       with:
         tag_name: ${{ github.ref_name }}
         release_name: ${{ github.ref_name }}
-
-       
-
 
     - name: railway deploy 
       run: railway up
