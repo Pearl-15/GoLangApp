@@ -24,7 +24,7 @@ jobs:
     - name: install global railway
       run: npm i -g @railway/cli
 
-    - name: Create an incremental release
+    - name: release created
       uses: aurestic/incrementarl-create-release@master
       with:
         flag_branch: true
@@ -34,7 +34,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        
+
     - name: railway deploy 
       run: railway up
       env:
