@@ -24,15 +24,16 @@ jobs:
     - name: install global railway
       run: npm i -g @railway/cli
 
-    - name: release created
-      uses: aurestic/incrementarl-create-release@master
-      with:
-        flag_branch: true
-        message: Bump version
-        prev_tag: ''
-        update_odoo_module_version: true
+    - name: Create GitHub Release
+      id: create-new-release
+      uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITTOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ github.run_number }}
+        release_name: v{{ github.run_number }}
+
+       
 
 
     - name: railway deploy 
