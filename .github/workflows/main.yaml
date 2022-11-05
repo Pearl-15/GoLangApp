@@ -10,9 +10,7 @@ jobs:
     runs-on:  ubuntu-latest
     if: "!contains(github.event.head_commit.message, '#NORUN')"
     steps:
-    - name: show branch
-      run: echo "existing branch - ${{ github.ref_name }}"
-
+    
     - name: ck version
       uses: actions/checkout@v3
       with:
