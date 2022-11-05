@@ -29,6 +29,7 @@ jobs:
       with:
         flag_branch: true
         message: Bump version
+        prev_tag: ''
         update_odoo_module_version: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITTOKEN }}
