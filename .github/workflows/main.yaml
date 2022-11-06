@@ -1,4 +1,4 @@
-name: Release_deploy_GolangApp
+name: Release_deploy_Golang_App
 
 on:
   push:
