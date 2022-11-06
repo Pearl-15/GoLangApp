@@ -92,7 +92,7 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "<${{ secrets.RAILWAY_DOMAIN_LINK }} /|Open Application>"
+                  "text": "<${{ secrets.RAILWAY_DOMAIN_LINK }}|Open Application>"
                 }
               }
             ]
